@@ -153,6 +153,22 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// createOrder_Impl
+Rcpp::List createOrder_Impl(SEXP con_, std::string security_, SEXP size_, std::string side_, std::string type_, std::string tif_);
+RcppExport SEXP _Rblpapi_createOrder_Impl(SEXP con_SEXP, SEXP security_SEXP, SEXP size_SEXP, SEXP side_SEXP, SEXP type_SEXP, SEXP tif_SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type con_(con_SEXP);
+    Rcpp::traits::input_parameter< std::string >::type security_(security_SEXP);
+    Rcpp::traits::input_parameter< SEXP >::type size_(size_SEXP);
+    Rcpp::traits::input_parameter< std::string >::type side_(side_SEXP);
+    Rcpp::traits::input_parameter< std::string >::type type_(type_SEXP);
+    Rcpp::traits::input_parameter< std::string >::type tif_(tif_SEXP);
+    rcpp_result_gen = Rcpp::wrap(createOrder_Impl(con_, security_, size_, side_, type_, tif_));
+    return rcpp_result_gen;
+END_RCPP
+}
 // fieldSearch_Impl
 Rcpp::DataFrame fieldSearch_Impl(SEXP con, std::string searchterm, std::string excludeterm);
 RcppExport SEXP _Rblpapi_fieldSearch_Impl(SEXP conSEXP, SEXP searchtermSEXP, SEXP excludetermSEXP) {
@@ -257,6 +273,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_Rblpapi_getHeaderVersion", (DL_FUNC) &_Rblpapi_getHeaderVersion, 0},
     {"_Rblpapi_getRuntimeVersion", (DL_FUNC) &_Rblpapi_getRuntimeVersion, 0},
     {"_Rblpapi_bsrch_Impl", (DL_FUNC) &_Rblpapi_bsrch_Impl, 4},
+    {"_Rblpapi_createOrder_Impl", (DL_FUNC) &_Rblpapi_createOrder_Impl, 6},
     {"_Rblpapi_fieldSearch_Impl", (DL_FUNC) &_Rblpapi_fieldSearch_Impl, 3},
     {"_Rblpapi_getBars_Impl", (DL_FUNC) &_Rblpapi_getBars_Impl, 8},
     {"_Rblpapi_fieldInfo_Impl", (DL_FUNC) &_Rblpapi_fieldInfo_Impl, 2},

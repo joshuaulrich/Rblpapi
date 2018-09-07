@@ -63,6 +63,10 @@ bsrch_Impl <- function(con, domain, limit, verbose = FALSE) {
     .Call(`_Rblpapi_bsrch_Impl`, con, domain, limit, verbose)
 }
 
+createOrder_Impl <- function(con_, security_, size_, side_, type_, tif_) {
+    .Call(`_Rblpapi_createOrder_Impl`, con_, security_, size_, side_, type_, tif_)
+}
+
 fieldSearch_Impl <- function(con, searchterm, excludeterm) {
     .Call(`_Rblpapi_fieldSearch_Impl`, con, searchterm, excludeterm)
 }
